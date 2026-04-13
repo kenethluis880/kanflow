@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KanFlow Board</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">⬡</span>
+        <h1>KanFlow</h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- BOARD -->
+  <main class="board" id="board">
+
+    <!-- TO DO -->
+    <section class="column" data-column="todo">
+      <div class="column-header">
+        <span class="column-dot dot-todo"></span>
+        <h2 class="column-title">To Do</h2>
+        <span class="column-count">6</span>
+      </div>
+      <div class="card-list" id="col-todo">
+        <article class="card"><p class="card-title">Implement drag and drop functionality</p><span class="card-tag tag-blue">Feature</span></article>
+        <article class="card"><p class="card-title">Fix responsive layout</p><span class="card-tag tag-yellow">CSS</span></article>
+        <article class="card"><p class="card-title">Connect local storage</p><span class="card-tag tag-green">JS</span></article>
+        <article class="card"><p class="card-title">Design UI animations</p><span class="card-tag tag-blue">UI</span></article>
+        <article class="card"><p class="card-title">Test interactions</p><span class="card-tag tag-green">Test</span></article>
+        <article class="card"><p class="card-title">Refactor codebase</p><span class="card-tag tag-yellow">Code</span></article>
+      </div>
+    </section>
+
+    <!-- IN PROGRESS -->
+    <section class="column" data-column="inprogress">
+      <div class="column-header">
+        <span class="column-dot dot-inprogress"></span>
+        <h2 class="column-title">In Progress</h2>
+        <span class="column-count">2</span>
+      </div>
+      <div class="card-list" id="col-inprogress">
+        <article class="card"><p class="card-title">Style board layout</p><span class="card-tag tag-yellow">CSS</span></article>
+        <article class="card"><p class="card-title">Link JS files</p><span class="card-tag tag-blue">JS</span></article>
+      </div>
+    </section>
+
+    <!-- REVIEW -->
+    <section class="column" data-column="review">
+      <div class="column-header">
+        <span class="column-dot dot-review"></span>
+        <h2 class="column-title">Review</h2>
+        <span class="column-count">0</span>
+      </div>
+      <div class="card-list" id="col-review"></div>
+    </section>
+
+    <!-- DONE -->
+    <section class="column" data-column="done">
+      <div class="column-header">
+        <span class="column-dot dot-done"></span>
+        <h2 class="column-title">Done</h2>
+        <span class="column-count">1</span>
+      </div>
+      <div class="card-list" id="col-done">
+        <article class="card card-done">
+          <p class="card-title">Plan Kanban board modules</p>
+          <span class="card-tag tag-green">Planning</span>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
+<main class="board" id="board">
+
+  <!-- TO DO (6 cards) -->
+  <section class="column" data-column="todo">
+    <div class="column-header">
+      <span class="column-dot dot-todo"></span>
+      <h2 class="column-title">To Do</h2>
+      <span class="column-count">6</span>
+    </div>
+
+    <div class="card-list" id="col-todo">
+      <article class="card"><p class="card-title">Implement drag and drop functionality</p><span class="card-tag tag-blue">Feature</span></article>
+      <article class="card"><p class="card-title">Fix responsive layout</p><span class="card-tag tag-yellow">CSS</span></article>
+      <article class="card"><p class="card-title">Connect local storage</p><span class="card-tag tag-green">JS</span></article>
+      <article class="card"><p class="card-title">Design UI animations</p><span class="card-tag tag-blue">UI</span></article>
+      <article class="card"><p class="card-title">Test interactions</p><span class="card-tag tag-green">Test</span></article>
+      <article class="card"><p class="card-title">Refactor codebase</p><span class="card-tag tag-yellow">Code</span></article>
+    </div>
+  </section>
+
+  <!-- IN PROGRESS (2 cards) -->
+  <section class="column" data-column="inprogress">
+    <div class="column-header">
+      <span class="column-dot dot-inprogress"></span>
+      <h2 class="column-title">In Progress</h2>
+      <span class="column-count">2</span>
+    </div>
+
+    <div class="card-list" id="col-inprogress">
+      <article class="card"><p class="card-title">Style board layout</p><span class="card-tag tag-yellow">CSS</span></article>
+      <article class="card"><p class="card-title">Link JS files</p><span class="card-tag tag-blue">JS</span></article>
+    </div>
+  </section>
+
+  <!-- REVIEW (0 cards) -->
+  <section class="column" data-column="review">
+    <div class="column-header">
+      <span class="column-dot dot-review"></span>
+      <h2 class="column-title">Review</h2>
+      <span class="column-count">0</span>
+    </div>
+
+    <div class="card-list" id="col-review"></div>
+  </section>
+
+  <!-- DONE (1 card) -->
+  <section class="column" data-column="done">
+    <div class="column-header">
+      <span class="column-dot dot-done"></span>
+      <h2 class="column-title">Done</h2>
+      <span class="column-count">1</span>
+    </div>
+
+    <div class="card-list" id="col-done">
+      <article class="card card-done">
+        <p class="card-title">Plan Kanban board modules</p>
+        <span class="card-tag tag-green">Planning</span>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+  <!-- COLUMN: To Do -->
+  <section class="column" data-column="todo">
+    <div class="column-header">
+      <span class="column-dot dot-todo"></span>
+      <h2 class="column-title">To Do</h2>
+      <span class="column-count">6</span>
+    </div>
+    <div class="card-list" id="col-todo">
+
+      <article class="card">
+        <p class="card-title">Implement drag and drop functionality</p>
+        <span class="card-tag tag-blue">Feature</span>
+      </article>
+
+      <article class="card">
+        <p class="card-title">Fix responsive layout for mobile view</p>
+        <span class="card-tag tag-yellow">CSS</span>
+      </article>
+
+      <article class="card">
+        <p class="card-title">Connect board data to local storage</p>
+        <span class="card-tag tag-green">JS</span>
+      </article>
+
+      <article class="card">
+        <p class="card-title">Test additional task</p>
+        <span class="card-tag tag-blue">Test</span>
+      </article>
+
+      <article class="card">
+        <p class="card-title">Finalize UI animations</p>
+        <span class="card-tag tag-blue">UI</span>
+      </article>
+
+      <article class="card">
+        <p class="card-title">Test drag and drop behavior</p>
+        <span class="card-tag tag-green">Test</span>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- COLUMN: In Progress -->
+  <section class="column" data-column="inprogress">
+    <div class="column-header">
+      <span class="column-dot dot-inprogress"></span>
+      <h2 class="column-title">In Progress</h2>
+      <span class="column-count">2</span>
+    </div>
+    <div class="card-list" id="col-inprogress">
+
+      <article class="card">
+        <p class="card-title">Style the board layout with CSS</p>
+        <span class="card-tag tag-yellow">CSS</span>
+      </article>
+
+      <article class="card">
+        <p class="card-title">Link JS files to index.html</p>
+        <span class="card-tag tag-blue">JS</span>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- COLUMN: Review -->
+  <section class="column" data-column="review">
+    <div class="column-header">
+      <span class="column-dot dot-review"></span>
+      <h2 class="column-title">Review</h2>
+      <span class="column-count">0</span>
+    </div>
+    <div class="card-list" id="col-review"></div>
+  </section>
+
+  <!-- COLUMN: Done -->
+  <section class="column" data-column="done">
+    <div class="column-header">
+      <span class="column-dot dot-done"></span>
+      <h2 class="column-title">Done</h2>
+      <span class="column-count">1</span>
+    </div>
+    <div class="card-list" id="col-done">
+
+      <article class="card card-done">
+        <p class="card-title">Plan Kanban board modules</p>
+        <span class="card-tag tag-green">Planning</span>
+      </article>
+
+    </div>
+  </section>
+
+</main>
